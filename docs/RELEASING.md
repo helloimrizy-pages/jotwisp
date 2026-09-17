@@ -42,13 +42,28 @@ public binary distribution. Do not upload the local ad-hoc app as a signed relea
 - [x] In Xcode → Settings → Accounts, sign in to the paid developer team.
   Membership alone does not install signing certificates on this Mac.
 - [ ] Confirm the legal seller name and Team ID with the account holder.
-- [ ] Register/verify the explicit App ID `app.textdump.mac`. If unavailable,
+- [x] Register/verify the explicit App ID `app.textdump.mac`. If unavailable,
   resolve a new identifier and migration implications before changing code.
-- [ ] Copy `Config/Signing.example.xcconfig` to the ignored
+- [x] Copy `Config/Signing.example.xcconfig` to the ignored
   `Config/Signing.local.xcconfig` and set DEVELOPMENT_TEAM. Never commit keys,
   certificates, profiles, Apple credentials, or App Store Connect API keys.
-- [ ] In Xcode, select the Jotwisp scheme and configure automatic signing using
+- [x] Configure automatic signing using
   the intended team. Have the owner authorize any certificate/profile creation.
+
+Local signing setup completed September 17, 2026 with owner approval. Development,
+app-distribution, and Mac Installer Distribution certificates were created; none
+were revoked. An App Store provisioning profile was created during local export.
+Private configuration is ignored by Git. The signed package is not a public
+download and has not been uploaded or submitted to Apple.
+
+Local export, after the ignored export-options file has been configured with
+`method=app-store-connect`, `destination=export`, and the intended team:
+
+```sh
+xcodebuild -exportArchive -archivePath build/Jotwisp.xcarchive \
+  -exportPath build/AppStoreExport -exportOptionsPlist Config/ExportOptions.local.plist
+```
+
 - [ ] Account holder completes the Paid Apps Agreement, tax, banking, and trader
   status/disclosures in App Store Connect. These are private legal/account steps.
 

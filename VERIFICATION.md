@@ -20,9 +20,18 @@
 - The MIT source is public at `helloimrizy-pages/jotwisp`. Unauthenticated checks
   returned HTTP 200 for the repository, logo, support and privacy pages.
   No App Store listing, upload, or purchase availability is claimed.
-- Xcode account sign-in is confirmed, but the existing certificate is marked
-  “Not in Keychain” and this Mac has no valid signing identities.
-- Required before release: Apple signing setup; signed sandbox runtime QA
+- With the owner's approval, created Apple Development, Apple Distribution, and
+  Mac Installer Distribution signing identities, retaining existing certificates.
+  Installed Apple's verified WWDR G3 intermediate without trust overrides.
+- A universal signed archive was created at `build/Jotwisp.xcarchive` and passed
+  strict code-signature validation. Xcode exported an App Store distribution
+  package at `build/AppStoreExport/Jotwisp.pkg`, using a new Mac Team Store
+  provisioning profile for `app.textdump.mac`. Installer signature validation passed.
+  The distribution summary confirms sandbox, user-selected file read/write,
+  and Apple application/team identity entitlements; no network entitlement.
+- Signing configuration and all certificates, profiles, logs, and build products
+  remain outside Git. Nothing has been uploaded to App Store Connect or submitted.
+- Required before release: signed sandbox runtime QA
   (including real cross-app capture);
   screenshots using synthetic text; store agreements/account disclosures;
   listing completion, review, and manual release.
