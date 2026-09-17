@@ -1,0 +1,16 @@
+{
+  "name": "Jotwisp",
+  "subtitle": "A quiet home for your text",
+  "promotional_text": "Catch a thought. Keep a snippet. Find it later. A simple, native scratchpad for text that matters.",
+  "description": "A little space for everything worth keeping.\n\nJotwisp is a native Mac scratchpad for notes, copied answers, code snippets, and plain-text tables. Open it, start typing, and get back to your day. Your drafts save locally without naming a file first.\n\nYOUR TEXT, WITH ROOM TO BREATHE\nA clean sidebar keeps your drafts close. Line numbers and a monospaced editor preserve plain-text spacing. Text wraps as you resize the window; switch wrapping off for wide tables or code.\n\nFIND IT AGAIN\nSearch titles and contents across your drafts, or use familiar Mac find and replace inside the current draft.\n\nCAPTURE IN A MOMENT\nCopy text in any app, then press Control–Option–V while Jotwisp is running. Your clipboard becomes a new draft, ready to keep or edit. No Accessibility permission is needed for the App Store shortcut.\n\nPICK UP WHERE YOU LEFT OFF\nDrafts and workspace state return when you reopen Jotwisp. Import UTF-8 text files, export a copy when you need one, and restore deleted drafts from Trash before permanently deleting them.\n\nLOCAL BY DESIGN\nNo account, advertising, tracking, or cloud service. Jotwisp does not send your text to an AI service. Your library stays on your Mac; keep your own backups.\n\nBUILT FOR MAC\nSwiftUI and AppKit, system light and dark appearance, native keyboard commands, and lightweight syntax highlighting for common code formats.\n\nOne purchase. No subscription or in-app purchases. Jotwisp is also open source under the MIT license; buying the App Store edition supports development and gives you a convenient store-managed installation.\n\nRequires macOS 14 or later. Plain text only: Markdown tables are not rendered as rich tables. Local autosave is not cloud sync or version history. Undo history resets when switching drafts.",
+  "keywords": "notes,scratchpad,notepad,text,editor,snippets,clipboard,drafts,plain text,offline,markdown",
+  "support_url": "https://github.com/helloimrizy-pages/jotwisp/blob/main/docs/SUPPORT.md",
+  "privacy_policy_url": "https://github.com/helloimrizy-pages/jotwisp/blob/main/docs/PRIVACY.md",
+  "marketing_url": "https://github.com/helloimrizy-pages/jotwisp",
+  "primary_category": "public.app-category.productivity",
+  "base_territory": "USA",
+  "one_time_base_price_usd": "9.99",
+  "release_method": "manual",
+  "availability": "pending-owner-selection",
+  "status": "DRAFT — not uploaded or available for purchase"
+}

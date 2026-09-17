@@ -1,0 +1,19 @@
+PRODUCT_NAME = Jotwisp
+PRODUCT_BUNDLE_IDENTIFIER = app.textdump.mac
+INFOPLIST_FILE = Resources/Info.plist
+GENERATE_INFOPLIST_FILE = NO
+CODE_SIGN_ENTITLEMENTS = Resources/Jotwisp.entitlements
+CODE_SIGN_STYLE = Automatic
+ENABLE_APP_SANDBOX = YES
+ENABLE_HARDENED_RUNTIME = YES
+ENABLE_USER_SELECTED_FILES = readwrite
+ENABLE_USER_SCRIPT_SANDBOXING = YES
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) APP_STORE
+MACOSX_DEPLOYMENT_TARGET = 14.0
+SWIFT_VERSION = 5.0
+COMBINE_HIDPI_IMAGES = YES
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks
+SUPPORTED_PLATFORMS = macosx
+SKIP_INSTALL = NO
+// Copy Signing.example.xcconfig to Signing.local.xcconfig; never commit account keys.
+#include? "Signing.local.xcconfig"

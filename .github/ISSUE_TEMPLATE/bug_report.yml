@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible problem with Jotwisp
+body:
+  - type: markdown
+    attributes:
+      value: "Use made-up text. Do not include private drafts or credentials. Report vulnerabilities using SECURITY.md."
+  - type: input
+    id: version
+    attributes:
+      label: Jotwisp and macOS versions
+      placeholder: "Jotwisp 1.1.0, macOS 26, Apple silicon, source build"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, what happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Optional sanitized screenshots or logs.

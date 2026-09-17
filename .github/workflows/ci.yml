@@ -1,0 +1,33 @@
+name: Build and test
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  macos:
+    runs-on: macos-15
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check release metadata
+        run: bash scripts/check-release.sh
+      - name: Test source edition
+        run: bash scripts/test.sh
+      - name: Package source edition
+        run: bash scripts/build.sh
+      - name: Validate source bundle
+        run: CLANG_MODULE_CACHE_PATH="$PWD/.build/ModuleCache" swift scripts/verify-bundle.swift
+      - name: Test App Store compilation branch
+        run: bash scripts/test.sh -Xswiftc -DAPP_STORE
+      - name: Compile universal App Store edition (unsigned)
+        run: bash scripts/build-appstore.sh --check
+      - name: Validate App Store bundle
+        run: CLANG_MODULE_CACHE_PATH="$PWD/.build/ModuleCache" swift scripts/verify-bundle.swift build/AppStoreCheck/Build/Products/Release/Jotwisp.app
