@@ -38,8 +38,20 @@ Visual Studio Code (the command host). Initial black video tests were rejected;
 bringing Jotwisp onto the current desktop fixed video capture. No desktop, other
 apps or audio were recorded. Three native 2560 × 1600 screenshots and three usable
 footage excerpts are in `docs/media/release/`. Raw captures remain local.
-The App Store preview is being assembled with `scripts/app-store-preview.js`.
-Full release QA is still pending.
+The App Store preview was rendered in Higgsfield with
+`scripts/app-store-preview.js`. Main scenes, cuts and a full-resolution search
+frame were visually inspected. The file is 24.000 seconds, 1920 × 1080, 30 fps,
+H.264 High level 4.0, approximately 10.91 Mb/s video, AAC stereo 48 kHz, and
+33,202,754 bytes. It uses the original synthesized ambient bed from the commercial.
+
+Master: `build/release-media/video/jotwisp-app-store-preview.mp4`.
+Editable project: `build/release-media/video/app-preview-project.zip`.
+SHA-256: `0272144e333466181af3b798c8032daaabb63fd6a4dccbb837c4ebd8f093033a`.
+
+Draft restoration passed: after a normal quit and genuine new-process launch,
+all four demo drafts and the selected captured draft returned with Saved locally.
+Remaining signed-build QA includes import/export, Trash restore and a dedicated
+long-line resize check. Apple upload processing and acceptance are separate gates.
 
 ## Store preparation
 
@@ -53,5 +65,8 @@ the enabled setting was verified in App Store Connect. Availability still needs
 an owner choice.
 Private review contact details belong only in App Store Connect, not this repo.
 
-Store media upload, footage preview rendering, build upload, final QA and owner compliance
+The three screenshots and the footage-based preview were uploaded to the draft
+listing. App Store Connect showed **1 of 3 App Previews, 3 of 10 Screenshots**.
+Final video processing and poster-frame review have not yet been verified.
+Build upload, remaining signed-build QA, availability and owner compliance
 declarations remain pending. Nothing has been submitted for review or released.
