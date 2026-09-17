@@ -13,12 +13,17 @@
   support/privacy/license, and seven transparent icon-resolution checks.
 - Plist, entitlement, project, shell syntax, listing field lengths, intended
   public URLs, and US$9.99 price passed local validation.
-- CI configuration is prepared but has not run on GitHub. Its checkout action is
-  pinned and repository permission is read-only; no signing secrets are used.
-- Public source/privacy/support URLs are intended destinations, not confirmed
-  live pages. No App Store listing, upload, or purchase availability is claimed.
-- Required before release: GitHub authentication/publication; Apple team and
-  signing setup; signed sandbox runtime QA (including real cross-app capture);
+- [First public CI run](https://github.com/helloimrizy-pages/jotwisp/actions/runs/35215276910)
+  passed source/store tests, source packaging, universal store compilation, and
+  both bundle checks. Repository permission is read-only; no signing secrets
+  are used. Checkout is pinned; Dependabot opened an upgrade proposal.
+- The MIT source is public at `helloimrizy-pages/jotwisp`. Unauthenticated checks
+  returned HTTP 200 for the repository, logo, support and privacy pages.
+  No App Store listing, upload, or purchase availability is claimed.
+- Xcode account sign-in is confirmed, but the existing certificate is marked
+  “Not in Keychain” and this Mac has no valid signing identities.
+- Required before release: Apple signing setup; signed sandbox runtime QA
+  (including real cross-app capture);
   screenshots using synthetic text; store agreements/account disclosures;
   listing completion, review, and manual release.
 

@@ -2,7 +2,7 @@
 
 ## Release decisions
 
-- GitHub owner: `helloimrizy-pages`; intended public repository: `jotwisp`.
+- Public source: [helloimrizy-pages/jotwisp](https://github.com/helloimrizy-pages/jotwisp).
 - Source license: MIT. Public contact: `rizy.izy15@gmail.com`.
 - Mac App Store: **US$9.99**, paid up front; no subscription or in-app purchase.
 - App Store shortcut: **Control–Option–V**. Source shortcut: literal **Command+C+D**.
@@ -13,15 +13,16 @@ This file is a checklist, not evidence of publication or Apple approval.
 
 ## 1. Public source
 
-- [ ] Inspect all staged files; exclude libraries, QA data, signing material,
+- [x] Inspect all staged files; exclude libraries, QA data, signing material,
   personal screenshots, credentials, build output, and local account settings.
-- [ ] Create the public `helloimrizy-pages/jotwisp` repository without a generated
+- [x] Create the public `helloimrizy-pages/jotwisp` repository without a generated
   README/license, then push the audited main branch. Do not overwrite an existing repo.
-- [ ] Set description: “A quiet, native macOS scratchpad. Autosaving drafts,
+- [x] Set description: “A quiet, native macOS scratchpad. Autosaving drafts,
   global search, and quick clipboard capture.” Topics: macos, swift, swiftui,
   appkit, notes, text-editor, privacy.
-- [ ] Verify README, icon, MIT license, support and privacy URLs while logged out.
-- [ ] Check CI passes on GitHub. The workflow has read-only access, no signing
+- [x] Verify public README, icon, support and privacy URLs without authentication;
+  confirm GitHub recognizes the MIT license.
+- [x] Check CI passes on GitHub. The workflow has read-only access, no signing
   secrets, and does not publish binaries or submit to Apple.
 
 Optional GitHub CLI commands after the owner has authenticated:
@@ -38,7 +39,7 @@ public binary distribution. Do not upload the local ad-hoc app as a signed relea
 
 ## 2. Apple account and signing
 
-- [ ] In Xcode → Settings → Accounts, sign in to the paid developer team.
+- [x] In Xcode → Settings → Accounts, sign in to the paid developer team.
   Membership alone does not install signing certificates on this Mac.
 - [ ] Confirm the legal seller name and Team ID with the account holder.
 - [ ] Register/verify the explicit App ID `app.textdump.mac`. If unavailable,
